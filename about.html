@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>About — Your Name</title>
+  <meta name="description" content="About page for Your Name's personal website">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <a href="index.html">Gustav Malkus Jäger</a>
+      </div>
+      
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="articles.html">Articles</a>
+        <a href="assets/CV_GustavJager.pdf" download class="btn">Download CV</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="card">
+        <h1>About Me</h1>
+        <p class="lead"></p>
+
+        <h2>Education</h2>
+        <div class="education">
+          <div class="degree-school">
+            <div class="degree">Exchange Semester</div>
+            <div class="school">National University of Singapore</div>
+            <div class="grade">Grade: </div>
+          </div>
+          <div class="dates">Aug 2025–Dec 2025</div>
+        </div>
+
+          <div class="education">
+            <div class="degree-school">
+              <div class="degree">BSc in Business and Economics</div>
+              <div class="school">Stockholm School of Economics</div>
+              <div class="grade">GPA: 4.51/5.0</div>
+            </div>
+            <div class="dates">Aug 2022–June 2026</div>
+          </div>
+
+        <h2>Skills</h2>
+        <p class="muted">Software: MS Office, Refinitiv Eikon, ICE Vantage, Bloomberg Terminal, SimCorp</p>
+        <p class="muted">Programming: Data Analysis and Modelling in VBA, R, and Python</p>
+
+        <h2>Highlights</h2>
+        <ul class="muted">
+          <li>Elected President of the Eduction Committee at the Student Association at the Stockholm School of Economics</li>
+        </ul>
+
+      </section>
+    </main>
+
+    <footer>
+      <div class="muted">© <span id="year"></span> Gustav Malkus Jäger</div>
+    </footer>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

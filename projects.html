@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Projects — Gustav Malkus Jäger</title>
+  <meta name="description" content="List of Gustav Malkus Jäger’s projects with filtering by type and language.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <a href="index.html">Gustav Malkus Jäger</a>
+      </div>
+      
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="articles.html">Articles</a>
+        <a href="assets/CV_GustavJager.pdf" download class="btn">Download CV</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="card">
+        <h1>Projects</h1>
+        <p class="lead">Explore my selected work — spanning finance, data analytics, and business strategy.</p>
+      
+        <!-- FILTERS -->
+        <div class="filters-wrapper">
+          <h3 class="filter-title">Filter:</h3>
+        
+          <div class="filters-group">
+            <div class="filter-subheading">By type:</div>
+            <div class="filters" id="type-filters">
+              <button class="filter-btn active" data-type="all">All</button>
+              <button class="filter-btn" data-type="valuation">Valuation</button>
+              <button class="filter-btn" data-type="modelling">Modelling</button>
+              <button class="filter-btn" data-type="academic">Academic</button>
+              <button class="filter-btn" data-type="dataanalysis">Data Analysis</button>
+            </div>
+          </div>
+        
+          <div class="filters-group">
+            <div class="filter-subheading">By language:</div>
+            <div class="filters" id="lang-filters">
+              <button class="filter-btn active" data-lang="all">All</button>
+              <button class="filter-btn" data-lang="python">Python</button>
+              <button class="filter-btn" data-lang="r">R</button>
+              <button class="filter-btn" data-lang="vba">VBA</button>
+              <button class="filter-btn" data-lang="excel">Excel</button>
+            </div>
+          </div>
+        </div>
+      
+        <!-- PROJECT GRID -->
+        <div id="project-list" class="project-grid">
+          <div id="project-list" class="project-grid">
+            <div class="project-card" data-type="finance strategy" data-lang="excel">
+              <div class="project-content">
+                <h3>Private Equity Valuation Model</h3>
+                <p class="muted">
+                  Built a discounted cash flow model to evaluate mid-market investment targets.
+                </p>
+              </div>
+          
+              <div class="project-footer">
+                <div class="tags">
+                  <span class="tag">Finance</span>
+                  <span class="tag">Strategy</span>
+                </div>
+                <a href="project-pe-model.html" class="view-link">View Project →</a>
+              </div>
+            </div>
+          </div>
+      
+          <div id="project-list" class="project-grid">
+            <div class="project-card" data-type="finance strategy" data-lang="excel">
+              <div class="project-content">
+                <h3>Private Equity Valuation Model</h3>
+                <p class="muted">
+                  Built a discounted cash flow model to evaluate mid-market investment targets.
+                </p>
+              </div>
+          
+              <div class="project-footer">
+                <div class="tags">
+                  <span class="tag">Finance</span>
+                  <span class="tag">Strategy</span>
+                </div>
+                <a href="project-pe-model.html" class="view-link">View Project →</a>
+              </div>
+            </div>
+          </div>
+      
+          <div id="project-list" class="project-grid">
+            <div class="project-card" data-type="finance strategy" data-lang="excel">
+              <div class="project-content">
+                <h3>Private Equity Valuation Model</h3>
+                <p class="muted">
+                  Built a discounted cash flow model to evaluate mid-market investment targets.
+                </p>
+              </div>
+          
+              <div class="project-footer">
+                <div class="tags">
+                  <span class="tag">Finance</span>
+                  <span class="tag">Strategy</span>
+                </div>
+                <a href="project-pe-model.html" class="view-link">View Project →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="muted">© <span id="year"></span> Gustav Malkus Jäger</div>
+    </footer>
+  </div>
+
+  <script>
+    const projects = document.querySelectorAll('.project-card');
+    
+    let selectedType = 'all';
+    let selectedLang = 'all';
+    
+    function filterProjects() {
+      projects.forEach(project => {
+        const projectType = project.getAttribute('data-type');
+        const projectLang = project.getAttribute('data-lang');
+    
+        const typeMatch = selectedType === 'all' || projectType.includes(selectedType);
+        const langMatch = selectedLang === 'all' || projectLang.includes(selectedLang);
+    
+        project.style.display = typeMatch && langMatch ? 'block' : 'none';
+      });
+    }
+    
+    // Type filters
+    const typeButtons = document.querySelectorAll('#type-filters .filter-btn');
+    typeButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        typeButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        selectedType = button.getAttribute('data-type');
+        filterProjects();
+      });
+    });
+    
+    // Language filters
+    const langButtons = document.querySelectorAll('#lang-filters .filter-btn');
+    langButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        langButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        selectedLang = button.getAttribute('data-lang');
+        filterProjects();
+      });
+    });
+    </script>
+    
+</body>
+</html>
+

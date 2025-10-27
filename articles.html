@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>About — Your Name</title>
+  <meta name="description" content="About page for Your Name's personal website">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <a href="index.html">Gustav Malkus Jäger</a>
+      </div>
+      
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="articles.html">Articles</a>
+        <a href="assets/CV_GustavJager.pdf" download class="btn">Download CV</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="card">
+        <h1>About Me</h1>
+        <p class="lead">I help companies make better product and investment decisions by combining rigorous quantitative analysis with pragmatic product thinking.</p>
+
+        <h2>Skills</h2>
+        <p class="muted">Product strategy · Financial modelling · Data engineering · Python · React · SQL</p>
+
+        <h2>Highlights</h2>
+        <ul class="muted">
+          <li>Led a cross-functional team of 6 to launch a SaaS product that increased ARR by 18%</li>
+          <li>Built forecasting model used for investor updates and planning</li>
+        </ul>
+
+        <h2>Education & Background</h2>
+        <p class="muted">Add relevant education and background information here.</p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="muted">© <span id="year"></span> Gustav Malkus Jäger </div>
+    </footer>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
